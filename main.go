@@ -15,9 +15,6 @@ func main() {
 		log.Fatal("Error loading .env file")
 	}
 
-	// os.Setenv("SLACK_BOT_TOKEN", "")
-	// os.Setenv("CHANNEL_ID", "")
-
 	api := slack.New(os.Getenv("SLACK_BOT_TOKEN"))
 	channelArr := []string{os.Getenv("CHANNEL_ID")}
 	fileArr := []string{"upload.txt"}
